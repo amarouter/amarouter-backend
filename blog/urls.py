@@ -17,6 +17,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('posts', views.getPosts, name="blog_posts"),
-    path('post/<str:pk>', views.getPost, name="blog_post"),
+    path('posts', views.get_posts, name="blog_posts"),
+    path('post/<str:pk>', views.get_post, name="blog_post"),
 ]
