@@ -12,8 +12,8 @@ def get_posts(request):
     return Response(post_list)
 
 @api_view(['GET'])
-def get_post(request, pk):
-    post = [post for post in posts.posts if str(post['_id']) == pk]
+def get_post(request, slug):
+    post = [post for post in posts.posts if str(post['slug']) == slug]
     if post:
         return Response(post[0])
     return Response(None)
